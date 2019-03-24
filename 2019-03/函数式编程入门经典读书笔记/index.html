@@ -386,7 +386,7 @@
     
       <br>
       <span>
-        最后更新于: 3月 22, 2019
+        最后更新于: 3月 24, 2019
       </span>
     
     
@@ -438,7 +438,7 @@
         
         <br>
           <span>最后修改时间：</span>
-          <span>3月 22, 2019</span>
+          <span>3月 24, 2019</span>
         
       </div>
       
@@ -503,7 +503,7 @@
         
         
           <section class="mdui-card-media">
-            <img src="/images/random/6.png">
+            <img src="/images/random/44.png">
           </section>
         
         <section class="mdui-typo theme-post__card__content">
@@ -651,8 +651,8 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="组合与管道"><a href="#组合与管道" class="headerlink" title="组合与管道"></a>组合与管道</h2><h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>概念：以一个函数的输出作为另一个函数的输入的方式，将多个函数结合起来。</p>
 <h3 id="compose"><a href="#compose" class="headerlink" title="compose"></a>compose</h3><ul>
-<li>compose(…fns)<br>数据流是从右至左的。</li>
-<li>pipe(…fns)<br>数据流是从左至右的。实现上两者只有很小的不同。</li>
+<li>compose(…fns)<br>组合多个函数，数据流是从右至左的。</li>
+<li>pipe(…fns)<br>数据流是从左至右的，管道pipeline也可以称作序列sequence。<br>实现上两者只有很小的不同。</li>
 </ul>
 <p>实现</p>
 <pre class="line-numbers language-js" mdui-tooltip="{content: 'js'}"><code class="language-js"><span class="token keyword">const</span> compose<span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">...</span>fns<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>
@@ -1009,7 +1009,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <script type="text/javascript">
   (function() {
-    var postLastModifiedDate = 1553264958474
+    var postLastModifiedDate = 1553417375202
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {
