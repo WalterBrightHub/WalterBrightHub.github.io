@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>我的朋友们 | 布洛格</title>
+  <title>所有标签 | 布洛格</title>
   
   
 
@@ -186,7 +186,7 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="links" class="post white-box article-type-links" itemscope itemprop="blogPost">
+            <article id="tags" class="post white-box article-type-tags" itemscope itemprop="blogPost">
   
 <section class="meta">
   
@@ -194,7 +194,7 @@
   <div class="meta" id="header-meta">
     
       
-          <h1 class="title">我的朋友们</h1>
+          <h1 class="title">所有标签</h1>
       
     
 
@@ -234,48 +234,20 @@
   </div>
 </section>
 
-    <section class="article typo l_friends">
-      
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
         
-          
-            <div class="friends-group">
-              
-                <h2 class="friend-header">
-                  
-                    <i class="fas fa-user-tie fa-fw" aria-hidden="true"></i>
-                  
-                  技术大佬
-                </h2>
-              
-              <div class="friend-content">
-                
-                  <a class="friend-card" style="background:#f5760a; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="http://zyowo.cn/">
-                    <div class="friend-left">
-                      <img class="avatar" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/qq/亲亲.gif" data-echo="/images/avatars/zyowo.me.jpg">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">章鱼喵</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>同学</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>逗比</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-              </div>
-            </div>
-          
+      </div>
         
-      
-      <br><hr>
-      
+
+        
+
     </section>
+
 </article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
 
 <br>
 
@@ -284,6 +256,13 @@
 
 
 
+
+<script>
+    window.subData = {
+        title: '所有标签',
+        tools: true
+    }
+</script>
 
         </div>
         <aside class='l_side'>
@@ -540,18 +519,6 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/gh/toddmotto/echo@1.7.3/src/echo.js"></script>
-  <script>
-    echo.init({
-      offset: 100,
-      throttle: 250,
-      unload: false,
-      callback: function (element, op) {
-        console.log(element, 'has been', op + 'ed')
-      }
-    });
-  </script>
 
 
 
