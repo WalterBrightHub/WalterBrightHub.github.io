@@ -188,6 +188,10 @@
         
           
         
+          
+        
+          
+        
       
 
 
@@ -197,6 +201,160 @@
       
 
       
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+    
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019-03/24-point/">
+              
+                  小胖的二十四点
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://walterbright.cc">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            水明
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2019-03-27
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/算法/思维/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              算法&nbsp;/&nbsp;思维
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给定四个数，四个基本运算符<code>+,-,*,/</code>，计算二十四点。可以添加括号。</p>
+        
+            <div class="readmore">
+                <a href="/2019-03/24-point/" class="flat-box">
+                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+                    阅读全文
+                </a>
+            </div>
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/乱搞/"><i class="fas fa-hashtag fa-fw"></i>乱搞</a>
+                
+            </div>
+        
+    </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+    
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019-03/traingle/">
+              
+                  小胖的三角形
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://walterbright.cc">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            水明
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            2019-03-26
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/算法/思维/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              算法&nbsp;/&nbsp;思维
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给定若干正数，问其中是否存在三个数可以构成三角形，若存在则输出其周长，否则输出-1。有多组解时求出任一解即可。</p>
+        
+            <div class="readmore">
+                <a href="/2019-03/traingle/" class="flat-box">
+                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+                    阅读全文
+                </a>
+            </div>
+        
+
+        
+            <div class="full-width auto-padding tags">
+                
+                    <a href="/tags/思维/"><i class="fas fa-hashtag fa-fw"></i>思维</a>
+                
+            </div>
+        
+    </section>
+</article>
+
+            </div>
+          
         
           
             <div class="post-wrapper">
@@ -269,8 +427,6 @@
                 
                     <a href="/tags/入门/"><i class="fas fa-hashtag fa-fw"></i>入门</a>
                 
-                    <a href="/tags/gaygay/"><i class="fas fa-hashtag fa-fw"></i>gaygay</a>
-                
             </div>
         
     </p></section>
@@ -294,6 +450,44 @@
   
 
   
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+    console.log("mathjax did loaded!");
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  
 
 
 
@@ -301,6 +495,44 @@
 
 <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
 
+
+
+    <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+    console.log("mathjax did loaded!");
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 
 
@@ -376,6 +608,10 @@
     <div class="content pure">
       <ul class="entry">
         
+          <li><a class="flat-box" title="/categories/算法/" href="/categories/算法/"><div class="name">算法</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/算法/思维/" href="/categories/算法/思维/"><div class="name">思维</div><div class="badge">(2)</div></a></li>
+        
           <li><a class="flat-box" title="/categories/编程范式/" href="/categories/编程范式/"><div class="name">编程范式</div><div class="badge">(1)</div></a></li>
         
           <li><a class="flat-box child" title="/categories/编程范式/函数式编程/" href="/categories/编程范式/函数式编程/"><div class="name">函数式编程</div><div class="badge">(1)</div></a></li>
@@ -400,7 +636,7 @@
 </header>
 
     <div class="content pure">
-      <a href="/tags/gaygay/" style="font-size: 14px; color: #999">gaygay</a> <a href="/tags/入门/" style="font-size: 14px; color: #999">入门</a> <a href="/tags/函数式编程/" style="font-size: 14px; color: #999">函数式编程</a>
+      <a href="/tags/乱搞/" style="font-size: 14px; color: #999">乱搞</a> <a href="/tags/入门/" style="font-size: 14px; color: #999">入门</a> <a href="/tags/函数式编程/" style="font-size: 14px; color: #999">函数式编程</a> <a href="/tags/思维/" style="font-size: 14px; color: #999">思维</a>
     </div>
   </section>
 
