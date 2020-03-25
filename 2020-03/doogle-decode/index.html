@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.2.1'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>逗酱的奇怪编码 - 水明</title>
+  
+  
+    <meta name="description" content="问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
+123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#...">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+            水明
+          
+          
+        </a>
+      
+
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  
+                    <i class='fas fa-folder-open fa-fw'></i>
+                  
+                  分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  
+                    <i class='fas fa-tags fa-fw'></i>
+                  
+                  标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        博客
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/categories/
+        
+        
+        
+          id="categories"
+        >
+        
+          <i class='fas fa-folder-open fa-fw'></i>
+        
+        分类
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/tags/
+        
+        
+        
+          id="tags"
+        >
+        
+          <i class='fas fa-tags fa-fw'></i>
+        
+        标签
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/friends/
+        
+        
+        
+          id="friends"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2020-03/doogle-decode/">
+        逗酱的奇怪编码
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://walterbright.cc" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>水明</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>算法&nbsp;/&nbsp;动态规划</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年3月24日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0     &#x3D;&gt; 口</span><br><span class="line">00    &#x3D;&gt; 吕</span><br><span class="line">000   &#x3D;&gt; 品</span><br><span class="line">1     &#x3D;&gt; Ⅰ</span><br><span class="line">11    &#x3D;&gt; Ⅱ</span><br><span class="line">111   &#x3D;&gt; Ⅲ</span><br><span class="line">010   &#x3D;&gt; 中</span><br><span class="line">00100 &#x3D;&gt; 串</span><br></pre></td></tr></table></figure>
+
+<p>同时逗酱要求转换后的编码长度尽可能小。</p>
+<a id="more"></a>
+
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>很基础的动态规划，设二进制字串为s，设dp[i]表示s前i位字符的最小编码长度，则<br>若s[i]==’0’</p>
+<ul>
+<li><p>s[i]单独编码成<code>口</code>，编码长度是dp[i-1]+1</p>
+</li>
+<li><p>s[i-1:i]为00，编码成<code>吕</code>，编码长度是dp[i-2]+1。</p>
+</li>
+<li><p>s[i-2:i]为000，编码成<code>品</code>，编码长度是dp[i-3]+1。</p>
+</li>
+<li><p>s[i-2:i]为010，编码成<code>中</code>，编码长度是dp[i-3]+1。</p>
+</li>
+<li><p>s[i-4:i]为00100，编码成<code>串</code>，编码长度是dp[i-5]+1。</p>
+</li>
+</ul>
+<p>故dp[i]=min(dp[i-1],dp[i-2]?,dp[i-3]?,dp[i-5]?)+1，注意上述五个情况有些不会满足。</p>
+<p>同理若s[i]==’1’</p>
+<ul>
+<li><p>s[i]单独编码成<code>Ⅰ</code>，编码长度是dp[i-1]+1。</p>
+</li>
+<li><p>若s[i-1:i]为11，编码成<code>Ⅱ</code>，编码长度是dp[i-2]+1。</p>
+</li>
+<li><p>若s[i-2:i]为111，编码成<code>Ⅲ</code>，编码长度是dp[i-3]+1。</p>
+</li>
+</ul>
+<p>故dp[i]=min(dp[i-1],dp[i-2]?,dp[i-3]?)+1，注意上述三个情况不一定同时满足。</p>
+<p>最少编码长度就是dp[s.length]</p>
+<p>那么知道了最少编码长度，怎么求最少编码呢？</p>
+<p>我们可以用left数组标记编码位置，即s[0:i]的最佳编码是s[0:left-1]的编码+s[left:i]的编码。</p>
+<h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> code = &#123;</span><br><span class="line">  <span class="string">'1'</span>: <span class="string">'Ⅰ'</span>,</span><br><span class="line">  <span class="string">'11'</span>: <span class="string">'Ⅱ'</span>,</span><br><span class="line">  <span class="string">'111'</span>: <span class="string">'Ⅲ'</span>,</span><br><span class="line">  <span class="string">'0'</span>: <span class="string">'口'</span>,</span><br><span class="line">  <span class="string">'00'</span>: <span class="string">'吕'</span>,</span><br><span class="line">  <span class="string">'000'</span>: <span class="string">'品'</span>,</span><br><span class="line">  <span class="string">'010'</span>: <span class="string">'中'</span>,</span><br><span class="line">  <span class="string">'00100'</span>: <span class="string">'串'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getBinary = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(n===<span class="number">0</span>) <span class="keyword">return</span> <span class="string">'0'</span></span><br><span class="line">  <span class="keyword">let</span> ans = <span class="string">''</span></span><br><span class="line">  <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    ans = n % <span class="number">2</span> + ans</span><br><span class="line">    n = <span class="built_in">Math</span>.floor(n / <span class="number">2</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(ans)</span><br><span class="line">  <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> decodeDoogle = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> b = getBinary(n)</span><br><span class="line">  <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="built_in">Array</span>(b.length + <span class="number">1</span>).fill(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">let</span> left = <span class="keyword">new</span> <span class="built_in">Array</span>(b.length + <span class="number">1</span>).fill(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  dp[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= b.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (b[i - <span class="number">1</span>] === <span class="string">'0'</span>) &#123;  <span class="comment">// 0, 00,000,010,00100</span></span><br><span class="line">      <span class="keyword">let</span> p0, p00, p000, p010, p00100</span><br><span class="line">      p0 = dp[i - <span class="number">1</span>] + <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">1</span> &amp;&amp; b.slice(i - <span class="number">2</span>, i - <span class="number">1</span>) === <span class="string">'0'</span>) &#123;</span><br><span class="line">        p00 = dp[i - <span class="number">2</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">2</span> &amp;&amp; b.slice(i - <span class="number">3</span>, i - <span class="number">1</span>) === <span class="string">'00'</span>) &#123;</span><br><span class="line">        p000 = dp[i - <span class="number">3</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">2</span> &amp;&amp; b.slice(i - <span class="number">3</span>, i - <span class="number">1</span>) === <span class="string">'01'</span>) &#123;</span><br><span class="line">        p010 = dp[i - <span class="number">3</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">4</span> &amp;&amp; b.slice(i - <span class="number">5</span>, i - <span class="number">1</span>) === <span class="string">'0010'</span>) &#123;</span><br><span class="line">        p00100 = dp[i - <span class="number">5</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      dp[i] = <span class="built_in">Math</span>.min(</span><br><span class="line">        p0,</span><br><span class="line">        p00 || <span class="literal">Infinity</span>,</span><br><span class="line">        p000 || <span class="literal">Infinity</span>,</span><br><span class="line">        p010 || <span class="literal">Infinity</span>,</span><br><span class="line">        p00100 || <span class="literal">Infinity</span></span><br><span class="line">      )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (p0 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p00 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">2</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p000 === dp[i] || p010 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">3</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p00100 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">5</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;   <span class="comment">// 1,11,11 1</span></span><br><span class="line">      <span class="keyword">let</span> p1, p11, p111</span><br><span class="line">      p1 = dp[i - <span class="number">1</span>] + <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">1</span> &amp;&amp; b.slice(i - <span class="number">2</span>, i - <span class="number">1</span>) === <span class="string">'1'</span>) &#123;</span><br><span class="line">        p11 = dp[i - <span class="number">2</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">2</span> &amp;&amp; b.slice(i - <span class="number">3</span>, i - <span class="number">1</span>) === <span class="string">'11'</span>) &#123;</span><br><span class="line">        p111 = dp[i - <span class="number">3</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      dp[i] = <span class="built_in">Math</span>.min(</span><br><span class="line">        p1,</span><br><span class="line">        p11 || <span class="literal">Infinity</span>,</span><br><span class="line">        p111 || <span class="literal">Infinity</span></span><br><span class="line">      )</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (p1 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p11 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">2</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p111 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">3</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> ans = <span class="string">''</span></span><br><span class="line">  <span class="keyword">let</span> p = b.length</span><br><span class="line">  <span class="keyword">while</span> (p) &#123;</span><br><span class="line">    ans = code[b.slice(left[p], p)] + ans</span><br><span class="line">    p = left[p]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(decodeDoogle(<span class="number">4870847</span>))</span><br><span class="line"> <span class="comment">// 10010100101001010111111</span></span><br><span class="line"> <span class="comment">// =&gt; Ⅰ吕Ⅰ中中Ⅰ吕Ⅰ中ⅢⅢ</span></span><br></pre></td></tr></table></figure>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://walterbright.cc/2020-03/doogle-decode/>https://walterbright.cc/2020-03/doogle-decode/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-24T02:08:28+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年3月24日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的奇怪编码 - 水明&summary=问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
+123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#x3D;&gt; 中00100 &#x3D;&gt; 串
+
+同时逗酱要求转换后的编码长度尽可能小。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的奇怪编码 - 水明&summary=问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
+123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#x3D;&gt; 中00100 &#x3D;&gt; 串
+
+同时逗酱要求转换后的编码长度尽可能小。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的奇怪编码 - 水明&summary=问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
+123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#x3D;&gt; 中00100 &#x3D;&gt; 串
+
+同时逗酱要求转换后的编码长度尽可能小。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2019-03/24-game/'>
+                <p class='title'>小胖的二十四点<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>问题描述给定四个数，四个基本运算符+,-,*,/，计算二十四点。可以添加括号。
+
+
+分析对于具体的一组形如a op1 b op2 c op3 d的算式，其添加括号就相当于指定三个操作符的顺序。例...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '逗酱的奇怪编码',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考代码"><span class="toc-text">参考代码</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        
+          <div><p><a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备17027810号</a></p>
+</div>
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:ssmbuild@outlook.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/WalterBrightHub"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="http://www.gitnavi.com/u/walterb/"
+                class="social fas fa-compass flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题
+        
+          ，
+          总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://walterbright.cc">Copyright © 2019-2020 水明</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://i.loli.net/2020/03/24/BgHbvXeRN98OIAM.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

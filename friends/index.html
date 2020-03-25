@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head hexo-theme='https://volantis.js.org/#2.2.1'>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- SEO相关 -->
   
-  <title>我的朋友们 | 布洛格</title>
+    
   
-  
-
-  
-
-  <meta name="HandheldFriendly" content="True">
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- meta -->
+
+  <!-- 页面元数据 -->
+  
+    <title>我的朋友们 - 水明</title>
+  
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
   
 
   <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
   
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
   
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
   
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
 
   
 
   
-  <link rel="stylesheet" href="/style.css">
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
   
 
   <script>
@@ -40,625 +65,720 @@
 </head>
 
 <body>
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar" class="pure"></div>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
 </div>
+<header class="l_header shadow blur">
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header pure">
-	<div class="wrapper">
-		<div class="nav-main container container--flex">
-      <a class="logo flat-box" href="/">
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
-          布洛格
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
-      </a>
-			<div class="menu">
-				<ul class="h-list">
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
           
-  					
-  						<li>
-								<a id="home" class="nav flat-box" href="/">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="categories" class="nav flat-box" href="/categories/">
-									<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="tags" class="nav flat-box" href="/tags/">
-									<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
-									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="friends" class="nav flat-box" href="/friends/">
-									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="about" class="nav flat-box" href="/about/">
-									<i class="fas fa-info-circle fa-fw"></i>&nbsp;关于
-								</a>
-							</li>
-      			
-      		
+          
+          
+            水明
+          
+          
+        </a>
+      
+
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  
+                    <i class='fas fa-folder-open fa-fw'></i>
+                  
+                  分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  
+                    <i class='fas fa-tags fa-fw'></i>
+                  
+                  标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
 				</ul>
 			</div>
 
-			
-				<div class="m_search">
-					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜索">
-						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
-					</form>
-				</div>
-			
-			<ul class="switcher h-list">
-				
-					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
-				
-				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
 
-		<div class="nav-sub container container--flex">
-			<a class="logo flat-box"></a>
-			<ul class="switcher h-list">
-				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
 			</ul>
 		</div>
 	</div>
 </header>
-	<aside class="menu-phone">
-    <header>
-		<nav class="menu">
-      <ul>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        博客
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/categories/
+        
+        
+        
+          id="categories"
+        >
+        
+          <i class='fas fa-folder-open fa-fw'></i>
+        
+        分类
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/tags/
+        
+        
+        
+          id="tags"
+        >
+        
+          <i class='fas fa-tags fa-fw'></i>
+        
+        标签
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/friends/
+        
+        
+        
+          id="friends"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  <article id="links" class="post white-box shadow article-type-links" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/friends/index.html">
+        我的朋友们
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
           
-              
-                  <li>
-										<a id="home" class="nav flat-box" href="/">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="categories" class="nav flat-box" href="/categories/">
-											<i class="fas fa-folder-open fa-fw"></i>&nbsp;分类
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="tags" class="nav flat-box" href="/tags/">
-											<i class="fas fa-hashtag fa-fw"></i>&nbsp;标签
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="friends" class="nav flat-box" href="/friends/">
-											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="about" class="nav flat-box" href="/about/">
-											<i class="fas fa-info-circle fa-fw"></i>&nbsp;关于
-										</a>
-                  </li>
-              
-       
-      </ul>
-		</nav>
-    </header>
-	</aside>
-
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
-            <article id="links" class="post white-box article-type-links" itemscope itemprop="blogPost">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      
-          <h1 class="title">我的朋友们</h1>
-      
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="https://blog.walterbright.cc">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            水明
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-clock" aria-hidden="true"></i>
-            2019-03-30
-          </a>
-        </div>
-      
-      
-      
         
-          <div class="new-meta-item browse busuanzi">
-            <a class="notlink">
-              <i class="fas fa-eye" aria-hidden="true"></i>
-              <span id="busuanzi_value_page_pv">
-                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://walterbright.cc" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>水明</p>
+  </a>
+</div>
+
+          
         
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2019年3月30日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
       
+        <hr>
       
     </div>
-    <hr>
-  </div>
-</section>
+  </section>
 
-    <section class="article typo l_friends">
-      
+
+      <section class="article article-entry l_friends">
+        
         
           
-            <div class="friends-group">
-              
-                <h2 class="friend-header">
-                  
-                    <i class="fas fa-user-tie fa-fw" aria-hidden="true"></i>
-                  
-                  技术大佬
-                </h2>
-              
-              <div class="friend-content">
-                
-                  <a class="friend-card" style="background:#f5760a; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="http://zyowo.cn/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="/images/avatars/zyowo.me.jpg">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">章鱼喵</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>同学</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>逗比</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-              </div>
-            </div>
-          
-        
-          
-            <div class="friends-group">
-              
-                <h2 class="friend-header">
-                  
-                    <i class="fas fa-code fa-fw" aria-hidden="true"></i>
-                  
-                  曲径通幽
-                </h2>
-              
-              <div class="friend-content">
-                
-                  <a class="friend-card" style="background:#23b6b6; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.yinchengli.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://www.yinchengli.com/favicon.ico">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">会编程的银猪</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>技术</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#42b983; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.cayun.me/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://avatars1.githubusercontent.com/u/14053930?s=460&v=4">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">允雨琉</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>ACM</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#fc6423; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.52cik.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://q.qlogo.cn/qqapp/100229475/2EBF2E8D6BCE97787D5F3CDC6DDBECED/160">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">Web技术试炼地</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>技术宅</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#f4f0eb; color:#6b5d38" target="_blank" rel="external nofollow noopener noreferrer" href="http://yangyingming.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="http://cdn.yangyingming.com/static/images/avatar.png">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">杨英明</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>C++</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Python</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#08bed5; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="https://c7sky.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://gravatar.loli.net/avatar/c5cb17c750acf25e53db7e9f236f694b?s=50&d=mm&r=g">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">小影志</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>WordPress</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#ff6079; color:#fff" target="_blank" rel="external nofollow noopener noreferrer" href="https://nexmoe.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://i.loli.net/2019/02/02/5c5504092677d.jpg">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">折影轻梦</p>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#fff; color:#000" target="_blank" rel="external nofollow noopener noreferrer" href="http://blog.miskcoo.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://tva1.sinaimg.cn/crop.0.0.720.720.180/d01f251cjw8eve9bgkwqvj20k00k0mxv.jpg">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">Miskcoo</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数学</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>计算机</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#fff; color:#000" target="_blank" rel="external nofollow noopener noreferrer" href="https://qqdie.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://gravatar.loli.net/avatar/07875140929860882f35fa5c06056d74?d=mm">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">QQdie</p>
-                      
-                        <div class="friend-tags-wrapper">
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Typecho</p>
-                        
-                          <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>ACG</p>
-                        
-                        </div>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#fff; color:#000" target="_blank" rel="external nofollow noopener noreferrer" href="http://ghyer.com/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="http://ghyer.com/wp-content/themes/cu/images/avatar.png">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">hello</p>
-                      
-                    </div>
-                  </a>
-                
-                  <a class="friend-card" style="background:#fff; color:#000" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.dreamwings.cn/">
-                    <div class="friend-left">
-                      <img class="avatar" src="/images/avatars/loading.gif" data-echo="https://secure.gravatar.com/avatar/806e52a2e2b9ff4bd2c23140df75cc1f?s=50&d=identicon&r=g">
-                    </div>
-                    <div class="friend-right">
-                      <p class="friend-name">千千</p>
-                      
-                    </div>
-                  </a>
-                
-              </div>
-            </div>
-          
-        
-      
-      <br><hr>
-      
-    </section>
-</article>
-
-<br>
-
-<!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box comments">
-    <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
-      
-        <section id="comments">
-          <div id="disqus_thread">
-            <div><i class="fas fa-exclamation-triangle">&nbsp;无法加载Disqus评论系统，请确保您的网络能够正常访问。</i></div>
             
+              <div class='friends-group'>
+                
+                  <br>
+                  <h3 class='friend-header'>
+                    
+                      <i class="fas fa-user-tie fa-fw" aria-hidden="true"></i>
+                    
+                    技术大佬
+                  </h3>
+                  
+                
+                <div class='friend-content'>
+                  
+                    <a class='friend-card' style='background:#f5760a; color:#fff'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='http://zyowo.cn/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='/images/avatars/zyowo.me.jpg'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">章鱼喵</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>同学</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>逗比</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                </div>
+              </div>
             
-          </div>
-        </section>
-      
-      
-      
-    </section>
+          
+            
+              <div class='friends-group'>
+                
+                  <br>
+                  <h3 class='friend-header'>
+                    
+                      <i class="fas fa-code fa-fw" aria-hidden="true"></i>
+                    
+                    曲径通幽
+                  </h3>
+                  
+                
+                <div class='friend-content'>
+                  
+                    <a class='friend-card' style='background:#23b6b6; color:#fff'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://www.yinchengli.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://www.yinchengli.com/favicon.ico'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">会编程的银猪</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>技术</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#42b983; color:#fff'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://www.cayun.me/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://avatars1.githubusercontent.com/u/14053930?s=460&v=4'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">允雨琉</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>ACM</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#fc6423; color:#fff'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://www.52cik.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://q.qlogo.cn/qqapp/100229475/2EBF2E8D6BCE97787D5F3CDC6DDBECED/160'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">Web技术试炼地</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>技术宅</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#f4f0eb; color:#6b5d38'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='http://yangyingming.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='http://cdn.yangyingming.com/static/images/avatar.png'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">杨英明</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>C++</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Python</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#08bed5; color:#fff'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://c7sky.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://gravatar.loli.net/avatar/c5cb17c750acf25e53db7e9f236f694b?s=50&d=mm&r=g'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">小影志</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>WordPress</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>前端</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#ff6079; color:#fff'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://nexmoe.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://i.loli.net/2019/02/02/5c5504092677d.jpg'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">折影轻梦</p>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#fff; color:#000'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='http://blog.miskcoo.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://tva1.sinaimg.cn/crop.0.0.720.720.180/d01f251cjw8eve9bgkwqvj20k00k0mxv.jpg'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">Miskcoo</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数学</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>计算机</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#fff; color:#000'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://qqdie.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://gravatar.loli.net/avatar/07875140929860882f35fa5c06056d74?d=mm'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">QQdie</p>
+                        
+                          <div class='friend-tags-wrapper'>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Typecho</p>
+                          
+                            <p class="tags"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>ACG</p>
+                          
+                          </div>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#fff; color:#000'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='http://ghyer.com/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='http://ghyer.com/wp-content/themes/cu/images/avatar.png'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">hello</p>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                    <a class='friend-card' style='background:#fff; color:#000'
+                      target="_blank" rel="external nofollow noopener noreferrer" href='https://www.dreamwings.cn/'>
+                      <div class='friend-left'>
+                        
+                          <img class='avatar' src='https://secure.gravatar.com/avatar/806e52a2e2b9ff4bd2c23140df75cc1f?s=50&d=identicon&r=g'/>
+                        
+                      </div>
+                      <div class='friend-right'>
+                        <p class="friend-name">千千</p>
+                        
+                        
+                      </div>
+                    </a>
+                  
+                </div>
+              </div>
+            
+          
+        
+        <br><br>
+        
+      </section>
   </article>
 
+  <!-- 显示推荐文章和评论 -->
 
+
+
+  
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        
+          <div><p><a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备17027810号</a></p>
+</div>
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:ssmbuild@outlook.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/WalterBrightHub"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="http://www.gitnavi.com/u/walterb/"
+                class="social fas fa-compass flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题
+        
+          ，
+          总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://walterbright.cc">Copyright © 2019-2020 水明</a></p>
 
         </div>
-        <aside class='l_side'>
-            
-  
-  
-    
       
-      
-        <section class="author">
-  <div class="content pure">
     
-      <div class="avatar">
-        <img class="avatar" src="/images/avatars/walterbright.cc.jpg">
-      </div>
-    
-    
-      <div class="text">
-        
-          <h2>水明</h2>
-        
-        
-          <p>今天写点什么好呢</p>
+  </footer>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:ssmbuild@outlook.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://github.com/walterbrighthub" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="http://www.gitnavi.com/u/walterb/" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-compass" aria-hidden="true"></i></a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="category">
-    
-<header class="pure">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
-  
-</header>
-
-    <div class="content pure">
-      <ul class="entry">
-        
-          <li><a class="flat-box" title="/categories/算法/" href="/categories/算法/"><div class="name">算法</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/算法/思维/" href="/categories/算法/思维/"><div class="name">思维</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/编程范式/" href="/categories/编程范式/"><div class="name">编程范式</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/编程范式/函数式编程/" href="/categories/编程范式/函数式编程/"><div class="name">函数式编程</div><div class="badge">(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
+<script>setLoadingBarProgress(80);</script>
 
 
-      
-    
-  
-    
-      
-      
-        
-  <section class="tagcloud">
-    
-<header class="pure">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
-  
-</header>
-
-    <div class="content pure">
-      <a href="/tags/乱搞/" style="font-size: 14px; color: #999">乱搞</a> <a href="/tags/入门/" style="font-size: 14px; color: #999">入门</a> <a href="/tags/函数式编程/" style="font-size: 14px; color: #999">函数式编程</a> <a href="/tags/思维/" style="font-size: 14px; color: #999">思维</a>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        
-
-      
-    
-  
-    
-      
-      
-        
-
-
-
-      
-    
-  
-
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
+      <script>setLoadingBarProgress(60);</script>
     </div>
     <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
-  
-    <div class="footer">
-      <p><a href="http://beian.miit.gov.cn/">浙ICP备17027810号</a></p>
-
-    </div>
-    <br>
-  
-  
-    <div class="social-wrapper">
-      
-        
-          <a href="mailto:ssmbuild@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://github.com/walterbrighthub" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="http://www.gitnavi.com/u/walterb/" class="social fas fa-compass flat-btn" target="_blank" rel="external"></a>
-        
-      
-    </div>
-  
-  <br>
-  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
-</div>
-  <div>本站使用 <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
   </div>
-</footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
 
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 
   <script>
-    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
-    var ALGOLIA_API_KEY = "";
-    var ALGOLIA_APP_ID = "";
-    var ALGOLIA_INDEX_NAME = "";
-    var AZURE_SERVICE_NAME = "";
-    var AZURE_INDEX_NAME = "";
-    var AZURE_QUERY_KEY = "";
-    var BAIDU_API_ID = "";
+    
     var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/"||"/";
-    if(!ROOT.endsWith('/'))ROOT += '/';
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
   </script>
 
 
-
-  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      const $reveal = $('.reveal');
-      if ($reveal.length === 0) return;
-      const sr = ScrollReveal({ distance: 0 });
-      sr.reveal('.reveal');
-    });
-  </script>
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
   <script type="text/javascript">
     $(function() {
       Waves.attach('.flat-btn', ['waves-button']);
@@ -676,51 +796,152 @@
 
 
 
-
-
-
-  <script>
-    var disqus_shortname = 'walterb';
+  
+  
+  
     
-      var disqus_url = 'https://blog.walterbright.cc/friends/index.html';
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://i.loli.net/2020/03/24/BgHbvXeRN98OIAM.jpg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
     
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-
-
-  <script src="/js/app.js"></script>
-<script src="/js/search.js"></script>
-<script src="/js/clipboard-use.js"></script>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/gh/toddmotto/echo@1.7.3/src/echo.js"></script>
-  <script>
-    echo.init({
-      offset: 100,
-      throttle: 250,
-      unload: false,
-      callback: function (element, op) {
-        console.log(element, 'has been', op + 'ed')
-      }
-    });
-  </script>
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("div.fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
 </body>
 </html>
