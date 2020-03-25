@@ -16,11 +16,10 @@
 
   <!-- 页面元数据 -->
   
-    <title>逗酱的奇怪编码 - 水明</title>
+    <title>逗酱的怪怪编码 - 水明</title>
   
   
-    <meta name="description" content="问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
-123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#...">
+    <meta name="description" content="逗酱想要把数字转换成编码。">
   
 
   <!-- feed -->
@@ -352,7 +351,7 @@
   
     <h1 class="title">
       <a href="/2020-03/doogle-decode/">
-        逗酱的奇怪编码
+        逗酱的怪怪编码
       </a>
     </h1>
   
@@ -413,12 +412,13 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：</p>
+          <p>逗酱想要把数字转换成编码。</p>
+<a id="more"></a>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0     &#x3D;&gt; 口</span><br><span class="line">00    &#x3D;&gt; 吕</span><br><span class="line">000   &#x3D;&gt; 品</span><br><span class="line">1     &#x3D;&gt; Ⅰ</span><br><span class="line">11    &#x3D;&gt; Ⅱ</span><br><span class="line">111   &#x3D;&gt; Ⅲ</span><br><span class="line">010   &#x3D;&gt; 中</span><br><span class="line">00100 &#x3D;&gt; 串</span><br></pre></td></tr></table></figure>
 
 <p>同时逗酱要求转换后的编码长度尽可能小。</p>
-<a id="more"></a>
-
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>很基础的动态规划，设二进制字串为s，设dp[i]表示s前i位字符的最小编码长度，则<br>若s[i]==’0’</p>
 <ul>
 <li><p>s[i]单独编码成<code>口</code>，编码长度是dp[i-1]+1</p>
@@ -487,10 +487,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-24T02:08:28+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-25T17:54:57+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年3月24日</p>
+    <p>更新于：2020年3月25日</p>
   </a>
 </div>
 
@@ -514,10 +514,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的奇怪编码 - 水明&summary=问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
-123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#x3D;&gt; 中00100 &#x3D;&gt; 串
-
-同时逗酱要求转换后的编码长度尽可能小。"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的怪怪编码 - 水明&summary=逗酱想要把数字转换成编码。"
           
           >
           
@@ -529,10 +526,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的奇怪编码 - 水明&summary=问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
-123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#x3D;&gt; 中00100 &#x3D;&gt; 串
-
-同时逗酱要求转换后的编码长度尽可能小。"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的怪怪编码 - 水明&summary=逗酱想要把数字转换成编码。"
           
           >
           
@@ -544,10 +538,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的奇怪编码 - 水明&summary=问题描述逗酱需要把数字先转换成二进制，再转换成编码，转换规律是：
-123456780     &#x3D;&gt; 口00    &#x3D;&gt; 吕000   &#x3D;&gt; 品1     &#x3D;&gt; Ⅰ11    &#x3D;&gt; Ⅱ111   &#x3D;&gt; Ⅲ010   &#x3D;&gt; 中00100 &#x3D;&gt; 串
-
-同时逗酱要求转换后的编码长度尽可能小。"
+          href="http://service.weibo.com/share/share.php?url=https://walterbright.cc/2020-03/doogle-decode/&title=逗酱的怪怪编码 - 水明&summary=逗酱想要把数字转换成编码。"
           
           >
           
@@ -574,10 +565,11 @@
             
               <a class='next' href='/2019-03/24-game/'>
                 <p class='title'>小胖的二十四点<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>问题描述给定四个数，四个基本运算符+,-,*,/，计算二十四点。可以添加括号。
+                <p class='content'>帮助小胖计算24点。
 
 
-分析对于具体的一组形如a op1 b op2 c op3 d的算式，其添加括号就相当于指定三个操作符的顺序。例...</p>
+问题描述给定四个数，四个基本运算符+,-,*,/，计算二十四点。可以添加括号。
+分析对于具体的一组形如a op1 b op2 c op3 d的算式，其添加括号就相当于指...</p>
               </a>
             
           </div>
@@ -605,7 +597,7 @@
 
   <script>
     window.subData = {
-      title: '逗酱的奇怪编码',
+      title: '逗酱的怪怪编码',
       tools: true
     }
   </script>
