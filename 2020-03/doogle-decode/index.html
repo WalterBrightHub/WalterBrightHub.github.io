@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head hexo-theme='https://volantis.js.org/#2.2.1'>
+<head hexo-theme='https://volantis.js.org/#2.6.5'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -29,7 +29,7 @@
   
 
   <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
   
     
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
@@ -50,6 +50,7 @@
   <!-- import link -->
   
 
+  
   
     
 <link rel="stylesheet" href="/css/style.css">
@@ -72,21 +73,21 @@
   <div id="loading-bar"></div>
 </div>
 <header class="l_header shadow blur">
-
+  <div class='container'>
   <div class='wrapper'>
     <div class='nav-sub'>
-      <a class="logo flat-box"></a>
-      <ul class='switcher h-list'>
-        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
-          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="logo flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href='/'>
           
           
           
@@ -96,10 +97,8 @@
         </a>
       
 
-      
-
 			<div class='menu navigation'>
-				<ul class='h-list'>
+				<ul class='nav-list-h'>
           
           
           
@@ -112,10 +111,7 @@
                   
                     id="home"
                   >
-                  
-                    <i class='fas fa-rss fa-fw'></i>
-                  
-                  博客
+                  <i class='fas fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -131,10 +127,7 @@
                   
                     id="categories"
                   >
-                  
-                    <i class='fas fa-folder-open fa-fw'></i>
-                  
-                  分类
+                  <i class='fas fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -150,10 +143,7 @@
                   
                     id="tags"
                   >
-                  
-                    <i class='fas fa-tags fa-fw'></i>
-                  
-                  标签
+                  <i class='fas fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -169,10 +159,7 @@
                   
                     id="archives"
                   >
-                  
-                    <i class='fas fa-archive fa-fw'></i>
-                  
-                  归档
+                  <i class='fas fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -188,10 +175,7 @@
                   
                     id="friends"
                   >
-                  
-                    <i class='fas fa-link fa-fw'></i>
-                  
-                  友链
+                  <i class='fas fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -207,10 +191,7 @@
                   
                     id="about"
                   >
-                  
-                    <i class='fas fa-info-circle fa-fw'></i>
-                  
-                  关于
+                  <i class='fas fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -220,112 +201,125 @@
 				</ul>
 			</div>
 
-      
-        <div class="m_search">
-          <form name="searchform" class="form u-search-form">
-            <i class="icon fas fa-search fa-fw"></i>
-            <input type="text" class="input u-search-input" placeholder="搜索" />
-          </form>
-        </div>
-      
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
 
-			<ul class='switcher h-list'>
+			<ul class='switcher nav-list-h'>
 				
-					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
 				
-				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
 			</ul>
 		</div>
 	</div>
+  </div>
 </header>
-<ul class="menu-phone navigation white-box">
-  
-  
-    <li>
-      <a class="flat-box" href=/
-        
-        
-        
-          id="home"
-        >
-        
-          <i class='fas fa-rss fa-fw'></i>
-        
-        博客
-      </a>
-    </li>
-  
-    <li>
-      <a class="flat-box" href=/categories/
-        
-        
-        
-          id="categories"
-        >
-        
-          <i class='fas fa-folder-open fa-fw'></i>
-        
-        分类
-      </a>
-    </li>
-  
-    <li>
-      <a class="flat-box" href=/tags/
-        
-        
-        
-          id="tags"
-        >
-        
-          <i class='fas fa-tags fa-fw'></i>
-        
-        标签
-      </a>
-    </li>
-  
-    <li>
-      <a class="flat-box" href=/archives/
-        
-        
-        
-          id="archives"
-        >
-        
-          <i class='fas fa-archive fa-fw'></i>
-        
-        归档
-      </a>
-    </li>
-  
-    <li>
-      <a class="flat-box" href=/friends/
-        
-        
-        
-          id="friends"
-        >
-        
-          <i class='fas fa-link fa-fw'></i>
-        
-        友链
-      </a>
-    </li>
-  
-    <li>
-      <a class="flat-box" href=/about/
-        
-        
-        
-          id="about"
-        >
-        
-          <i class='fas fa-info-circle fa-fw'></i>
-        
-        关于
-      </a>
-    </li>
-  
-</ul>
+
 <script>setLoadingBarProgress(40);</script>
 
 
@@ -338,32 +332,31 @@
   
 
   
-    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
       
 
 
   <section class='meta'>
     
-    
-    <div class="meta" id="header-meta">
       
-        
-  
-    <h1 class="title">
-      <a href="/2020-03/doogle-decode/">
-        逗酱的怪怪编码
-      </a>
-    </h1>
-  
-
-
       
-      <div class='new-meta-box'>
+      <div class="meta" id="header-meta">
         
           
+  <h1 class="title">
+    <a href="/2020-03/doogle-decode/">
+      逗酱的怪怪编码
+    </a>
+  </h1>
+
+
         
+        <div class='new-meta-box'>
           
             
+          
+            
+              
 <div class='new-meta-item author'>
   <a href="https://walterbright.cc" rel="nofollow">
     <img src="/images/avatars/avatar.jpg">
@@ -371,41 +364,42 @@
   </a>
 </div>
 
-          
-        
+            
           
             
+              
   
   <div class='new-meta-item category'>
     <a href='/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>算法&nbsp;/&nbsp;动态规划</p>
+      <p>算法/动态规划</p>
     </a>
   </div>
 
 
+            
           
-        
-          
-            <div class="new-meta-item date">
+            
+              <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2020年3月24日</p>
   </a>
 </div>
 
-          
-        
+            
           
             
+              
 
+            
           
+        </div>
+        
+          <hr>
         
       </div>
-      
-        <hr>
-      
-    </div>
+    
   </section>
 
 
@@ -449,8 +443,9 @@
 <h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> code = &#123;</span><br><span class="line">  <span class="string">'1'</span>: <span class="string">'Ⅰ'</span>,</span><br><span class="line">  <span class="string">'11'</span>: <span class="string">'Ⅱ'</span>,</span><br><span class="line">  <span class="string">'111'</span>: <span class="string">'Ⅲ'</span>,</span><br><span class="line">  <span class="string">'0'</span>: <span class="string">'口'</span>,</span><br><span class="line">  <span class="string">'00'</span>: <span class="string">'吕'</span>,</span><br><span class="line">  <span class="string">'000'</span>: <span class="string">'品'</span>,</span><br><span class="line">  <span class="string">'010'</span>: <span class="string">'中'</span>,</span><br><span class="line">  <span class="string">'00100'</span>: <span class="string">'串'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getBinary = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(n===<span class="number">0</span>) <span class="keyword">return</span> <span class="string">'0'</span></span><br><span class="line">  <span class="keyword">let</span> ans = <span class="string">''</span></span><br><span class="line">  <span class="keyword">while</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    ans = n % <span class="number">2</span> + ans</span><br><span class="line">    n = <span class="built_in">Math</span>.floor(n / <span class="number">2</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(ans)</span><br><span class="line">  <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> decodeDoogle = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> b = getBinary(n)</span><br><span class="line">  <span class="keyword">let</span> dp = <span class="keyword">new</span> <span class="built_in">Array</span>(b.length + <span class="number">1</span>).fill(<span class="number">0</span>)</span><br><span class="line">  <span class="keyword">let</span> left = <span class="keyword">new</span> <span class="built_in">Array</span>(b.length + <span class="number">1</span>).fill(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  dp[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= b.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (b[i - <span class="number">1</span>] === <span class="string">'0'</span>) &#123;  <span class="comment">// 0, 00,000,010,00100</span></span><br><span class="line">      <span class="keyword">let</span> p0, p00, p000, p010, p00100</span><br><span class="line">      p0 = dp[i - <span class="number">1</span>] + <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">1</span> &amp;&amp; b.slice(i - <span class="number">2</span>, i - <span class="number">1</span>) === <span class="string">'0'</span>) &#123;</span><br><span class="line">        p00 = dp[i - <span class="number">2</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">2</span> &amp;&amp; b.slice(i - <span class="number">3</span>, i - <span class="number">1</span>) === <span class="string">'00'</span>) &#123;</span><br><span class="line">        p000 = dp[i - <span class="number">3</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">2</span> &amp;&amp; b.slice(i - <span class="number">3</span>, i - <span class="number">1</span>) === <span class="string">'01'</span>) &#123;</span><br><span class="line">        p010 = dp[i - <span class="number">3</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">4</span> &amp;&amp; b.slice(i - <span class="number">5</span>, i - <span class="number">1</span>) === <span class="string">'0010'</span>) &#123;</span><br><span class="line">        p00100 = dp[i - <span class="number">5</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      dp[i] = <span class="built_in">Math</span>.min(</span><br><span class="line">        p0,</span><br><span class="line">        p00 || <span class="literal">Infinity</span>,</span><br><span class="line">        p000 || <span class="literal">Infinity</span>,</span><br><span class="line">        p010 || <span class="literal">Infinity</span>,</span><br><span class="line">        p00100 || <span class="literal">Infinity</span></span><br><span class="line">      )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (p0 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p00 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">2</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p000 === dp[i] || p010 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">3</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p00100 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">5</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;   <span class="comment">// 1,11,11 1</span></span><br><span class="line">      <span class="keyword">let</span> p1, p11, p111</span><br><span class="line">      p1 = dp[i - <span class="number">1</span>] + <span class="number">1</span></span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">1</span> &amp;&amp; b.slice(i - <span class="number">2</span>, i - <span class="number">1</span>) === <span class="string">'1'</span>) &#123;</span><br><span class="line">        p11 = dp[i - <span class="number">2</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (i &gt; <span class="number">2</span> &amp;&amp; b.slice(i - <span class="number">3</span>, i - <span class="number">1</span>) === <span class="string">'11'</span>) &#123;</span><br><span class="line">        p111 = dp[i - <span class="number">3</span>] + <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      dp[i] = <span class="built_in">Math</span>.min(</span><br><span class="line">        p1,</span><br><span class="line">        p11 || <span class="literal">Infinity</span>,</span><br><span class="line">        p111 || <span class="literal">Infinity</span></span><br><span class="line">      )</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (p1 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">1</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p11 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">2</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (p111 === dp[i]) &#123;</span><br><span class="line">        left[i] = i - <span class="number">3</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> ans = <span class="string">''</span></span><br><span class="line">  <span class="keyword">let</span> p = b.length</span><br><span class="line">  <span class="keyword">while</span> (p) &#123;</span><br><span class="line">    ans = code[b.slice(left[p], p)] + ans</span><br><span class="line">    p = left[p]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(decodeDoogle(<span class="number">4870847</span>))</span><br><span class="line"> <span class="comment">// 10010100101001010111111</span></span><br><span class="line"> <span class="comment">// =&gt; Ⅰ吕Ⅰ中中Ⅰ吕Ⅰ中ⅢⅢ</span></span><br></pre></td></tr></table></figure>
 
           
-            <br>
-            
+            <div class='article_footer'>
+              
+                
   
     
     
@@ -477,6 +472,8 @@
   
 
 
+              
+            </div>
           
         </div>
         
@@ -586,16 +583,6 @@
     </article>
   
 
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  
-
-
-  
-
 
 
 
@@ -692,11 +679,8 @@
       
         本站使用
         <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
-        作为主题
-        
-          ，
-          总访问量为
-          <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
           次
         
       
@@ -731,6 +715,18 @@
 
   <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
+    });
+  </script>
 
 
   
@@ -798,13 +794,15 @@
 
   
     
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
 
   
     
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js"></script>
 
   
+
+
 
 
 
@@ -821,7 +819,7 @@
 
 
   
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.4/js/search.js"></script>
 
 
 
@@ -830,10 +828,17 @@
 
 
 
+
+
+
 <!-- 复制 -->
 
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
   !function (e, t, a) {
     var initCopyCode = function(){
       var copyHtml = '';
@@ -841,6 +846,7 @@
       copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
       copyHtml += '</button>';
       $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
       var clipboard = new ClipboardJS('.btn-copy', {
         target: function(trigger) {
           return trigger.nextElementSibling;
@@ -848,12 +854,18 @@
       });
       clipboard.on('success', function(e) {
         let $btn = $(e.trigger);
-        $btn.addClass('copyed');
+        $btn.addClass('copied');
         let $icon = $($btn.find('i'));
         $icon.removeClass('fa-copy');
-        $icon.addClass('fa-clipboard-check');
+        $icon.addClass('fa-check-circle');
         let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPYED';
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
       });
       clipboard.on('error', function(e) {
         e.clearSelection();
@@ -861,9 +873,15 @@
         $btn.addClass('copy-failed');
         let $icon = $($btn.find('i'));
         $icon.removeClass('fa-copy');
-        $icon.addClass('fa-exclamation-triangle');
+        $icon.addClass('fa-times-circle');
         let $span = $($btn.find('span'));
         $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
       });
     }
     initCopyCode();
