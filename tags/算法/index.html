@@ -18,7 +18,7 @@
 
   <!-- 页面元数据 -->
   
-    <title>标签：函数式编程 - 水明</title>
+    <title>标签：算法 - 水明</title>
   
   
 
@@ -357,8 +357,8 @@
         
           
   <h2 class="title">
-    <a href="/2019-03/beginning-functional-javascript/">
-      《ES6函数式编程入门经典》读书笔记
+    <a href="/2020-06/LRU%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+      LRU算法
     </a>
   </h2>
 
@@ -381,14 +381,6 @@
           
             
               
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/' rel="nofollow">
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>编程范式/函数式编程</p>
-    </a>
-  </div>
-
 
             
           
@@ -396,7 +388,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2019年3月17日</p>
+    <p>发布于：2020年6月29日</p>
   </a>
 </div>
 
@@ -407,13 +399,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：1.8k字</p>
+      <p>字数：496字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：7分钟</p>
+      <p>时长：2分钟</p>
     </a>
   </div>
 
@@ -437,16 +429,18 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       
-        <p>初入函数式编程的坑，试试这本书吧。</p>
+        <a id="more"></a>
+<p><a href="https://mp.weixin.qq.com/s/mEoP1Ukkvo4MhqrRNJ_Abw" target="_blank" rel="noopener">前端进阶算法3：从浏览器缓存淘汰策略和Vue的keep-alive学习LRU算法</a><br><a href="https://leetcode-cn.com/problems/lru-cache/" target="_blank" rel="noopener">146. LRU缓存机制 - 力扣（LeetCode）</a></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>设计一个LRU缓存机制：</p>
+<ul>
+<li>get(key) 操作，如果 key 存在于缓存中，则返回值，否则返回-1。</li>
+<li>set(key,value) 操作，如果 key 存在于缓存中，则更新值，否则创建该组[key/value]。若缓存容量达到 capacity ，则去除最近最少使用的缓存节点，以腾出空间。<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2>用一个哈希表存储数据，每一个节点有如下属性<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</span><br><span class="line">    key</span><br><span class="line">    value</span><br><span class="line">    prev</span><br><span class="line">    next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+prev 和 next 用于组织节点成双向链表。<br>链表头部为最长时间未被使用节点，链表尾部为最近（上一次）被使用节点。<br>读取 key 并且命中，或者 set 操作时，将命中节点放到队尾。<br>需要清除LRU节点时，移除队首节点。为了根据双向链表中的位置（head.next）找到Map中的位置，创建节点时，记录节点在Map中的key。<h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</span><br><span class="line">    key</span><br><span class="line">    value</span><br><span class="line">    prev</span><br><span class="line">    next</span><br><span class="line">    <span class="keyword">constructor</span>(key,value)&#123;</span><br><span class="line">        <span class="keyword">this</span>.key=key</span><br><span class="line">        <span class="keyword">this</span>.value=value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> link=<span class="function">(<span class="params">nodeA,nodeB</span>)=&gt;</span>&#123;</span><br><span class="line">    nodeA.next=nodeB</span><br><span class="line">    nodeB.prev=nodeA</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span></span>&#123;</span><br><span class="line">    cache=<span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">    capacity</span><br><span class="line">    head=<span class="keyword">new</span> Node()                         <span class="comment">//head表示最少访问</span></span><br><span class="line">    <span class="keyword">constructor</span>(capacity)&#123;</span><br><span class="line">        <span class="keyword">this</span>.capacity=capacity</span><br><span class="line">        link(<span class="keyword">this</span>.head,<span class="keyword">this</span>.head)</span><br><span class="line">    &#125;</span><br><span class="line">    moveToTail(cache_at_key)&#123;       <span class="comment">//tail表示最近访问</span></span><br><span class="line">        <span class="comment">//优化：连续访问时无需操作</span></span><br><span class="line">        <span class="keyword">if</span>(cache_at_key.next===<span class="keyword">this</span>.head) <span class="keyword">return</span>;</span><br><span class="line">        link(cache_at_key.prev,cache_at_key.next)</span><br><span class="line">        <span class="keyword">let</span> tail_prev_node=<span class="keyword">this</span>.head.prev</span><br><span class="line">        link(tail_prev_node,cache_at_key)</span><br><span class="line">        link(cache_at_key,<span class="keyword">this</span>.head)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">get</span>(key)&#123;</span><br><span class="line">        <span class="keyword">let</span> cache_at_key=<span class="keyword">this</span>.cache.get(key)</span><br><span class="line">        <span class="keyword">if</span>(cache_at_key)&#123;</span><br><span class="line">            <span class="comment">//命中，放到最近访问</span></span><br><span class="line">            <span class="keyword">this</span>.moveToTail(cache_at_key)</span><br><span class="line">            <span class="keyword">return</span> cache_at_key.value</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    put(key,value)&#123;</span><br><span class="line">        <span class="keyword">let</span> cache_at_key=<span class="keyword">this</span>.cache.get(key)</span><br><span class="line">        <span class="keyword">if</span>(cache_at_key)&#123;</span><br><span class="line">            cache_at_key.value=value</span><br><span class="line">            <span class="comment">//命中，放到最近访问</span></span><br><span class="line">            <span class="keyword">this</span>.moveToTail(cache_at_key)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;                </span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.cache.size===<span class="keyword">this</span>.capacity)&#123;</span><br><span class="line">                <span class="keyword">let</span> lru_node=<span class="keyword">this</span>.head.next</span><br><span class="line">                link(<span class="keyword">this</span>.head,lru_node.next)</span><br><span class="line">                <span class="comment">//淘汰LRU</span></span><br><span class="line">                <span class="keyword">this</span>.cache.delete(lru_node.key)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//创建节点，并放到最近访问</span></span><br><span class="line">            <span class="keyword">let</span> cache_at_key=<span class="keyword">new</span> Node(key,value)</span><br><span class="line">            <span class="keyword">this</span>.cache.set(key,cache_at_key)</span><br><span class="line">            link(<span class="keyword">this</span>.head.prev,cache_at_key)</span><br><span class="line">            link(cache_at_key,<span class="keyword">this</span>.head)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
     
-      
-        <div class="button readmore">
-          <a href="/2019-03/beginning-functional-javascript/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
       
     
   </section>
