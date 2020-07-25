@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -16,12 +18,8 @@
 
   <!-- 页面元数据 -->
   
-    <title>LRU算法 - 水明</title>
+    <title>归档：2020/7 - 水明</title>
   
-    <meta name="keywords" content="算法">
-  
-  
-    <meta name="description" content="实现一个最近最少使用缓存机制。">
   
 
   <!-- feed -->
@@ -331,11 +329,22 @@
       
 
 <div class='l_main'>
-  
-
-  
-    <article id="post" class="post white-box reveal shadow article-type-post" itemscope itemprop="blogPost">
+	
+		
+  <section class="post-list ">
+    
       
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box shadow reveal ">
+  
 
 
   <section class='meta'>
@@ -345,11 +354,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h1 class="title">
-    <a href="/2020-06/LRU/">
-      LRU算法
+  <h2 class="title">
+    <a href="/2020-07/e-lucky/">
+      两种保底抽奖机制的数学期望比较
     </a>
-  </h1>
+  </h2>
 
 
         
@@ -377,9 +386,27 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年6月29日</p>
+    <p>发布于：2020年7月25日</p>
   </a>
 </div>
+
+            
+          
+            
+              
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：260字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：1分钟</p>
+    </a>
+  </div>
+
 
             
           
@@ -397,202 +424,210 @@
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          
-          <p>实现一个最近最少使用缓存机制。</p>
-<a id="more"></a>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现抽奖$n$次，单次中奖概率为$p(0&lt;p&lt;1)$，并且至少中奖一次，有如下两种保底机制：</p>
+<p>方式一：重复取n个随机序列，直到序列中至少中奖一次。</p>
+<p>方式二：序列前n-1项随机抽取，最后一项指定中奖。</p>
+<p>n=1时，显然方式一与方式二等价。</p>
+<p>n&gt;1时，比较方式一和方式二中奖的数学期望。</p>
+<p>解：</p>
+<p>假设单次抽奖中奖的数学期望为$E_0$</p>
+<p>方式一的数学期望为$E_1=\frac{nE_0}{1-(1-p)^n}$</p>
+<p>方式二的数学期望为$E_2=(n-1)E_0+\frac{E_0}{p}$</p>
+<p>下面证明$E_1&lt;E_2$</p>
+<p>即要证$np&lt;(1-(1-p)^n)(np-p+1)$</p>
+<p>即要证$\frac{np}{(np-p+1)}+(1-p)^n&lt;1$</p>
+<p>即要证$(1-p)^n&lt;\frac{1-p}{np}$</p>
+<p>即要证$n(1-p)^{n-1}p&lt;1$</p>
+<p>注意到左边恰好是二项式展开第二项，显然1=$\sum_{i=0}^{n}C_n^i(1-p)^{n-i}p^i&gt;n(1-p)^{n-1}p$</p>
+<!-- 设$f(p)=(1-p)^{n-1}p$，则$f(0)=f(1)=0$
 
-<p><a href="https://mp.weixin.qq.com/s/mEoP1Ukkvo4MhqrRNJ_Abw" target="_blank" rel="noopener">前端进阶算法3：从浏览器缓存淘汰策略和Vue的keep-alive学习LRU算法</a><br><a href="https://leetcode-cn.com/problems/lru-cache/" target="_blank" rel="noopener">146. LRU缓存机制 - 力扣（LeetCode）</a></p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>设计一个LRU缓存机制：</p>
-<ul>
-<li>get(key) 操作，如果 key 存在于缓存中，则返回值，否则返回-1。</li>
-<li>set(key,value) 操作，如果 key 存在于缓存中，则更新值，否则创建该组[key/value]。若缓存容量达到 capacity ，则去除最近最少使用的缓存节点，以腾出空间。</li>
-</ul>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>用一个哈希表存储数据，每一个节点有如下属性</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</span><br><span class="line">    key</span><br><span class="line">    value</span><br><span class="line">    prev</span><br><span class="line">    next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>prev 和 next 用于组织节点成双向链表。<br>链表头部为最长时间未被使用节点，链表尾部为最近（上一次）被使用节点。<br>读取 key 并且命中，或者 set 操作时，将命中节点放到队尾。<br>需要清除LRU节点时，移除队首节点。为了根据双向链表中的位置（head.next）找到Map中的位置，创建节点时，记录节点在Map中的key。</p>
-<h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</span><br><span class="line">    key</span><br><span class="line">    value</span><br><span class="line">    prev</span><br><span class="line">    next</span><br><span class="line">    <span class="keyword">constructor</span>(key,value)&#123;</span><br><span class="line">        <span class="keyword">this</span>.key=key</span><br><span class="line">        <span class="keyword">this</span>.value=value</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> link=<span class="function">(<span class="params">nodeA,nodeB</span>)=&gt;</span>&#123;</span><br><span class="line">    nodeA.next=nodeB</span><br><span class="line">    nodeB.prev=nodeA</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span></span>&#123;</span><br><span class="line">    cache=<span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">    capacity</span><br><span class="line">    head=<span class="keyword">new</span> Node()                         <span class="comment">//head表示最少访问</span></span><br><span class="line">    <span class="keyword">constructor</span>(capacity)&#123;</span><br><span class="line">        <span class="keyword">this</span>.capacity=capacity</span><br><span class="line">        link(<span class="keyword">this</span>.head,<span class="keyword">this</span>.head)</span><br><span class="line">    &#125;</span><br><span class="line">    moveToTail(cache_at_key)&#123;       <span class="comment">//tail表示最近访问</span></span><br><span class="line">        <span class="comment">//优化：连续访问时无需操作</span></span><br><span class="line">        <span class="keyword">if</span>(cache_at_key.next===<span class="keyword">this</span>.head) <span class="keyword">return</span>;</span><br><span class="line">        link(cache_at_key.prev,cache_at_key.next)</span><br><span class="line">        <span class="keyword">let</span> tail_prev_node=<span class="keyword">this</span>.head.prev</span><br><span class="line">        link(tail_prev_node,cache_at_key)</span><br><span class="line">        link(cache_at_key,<span class="keyword">this</span>.head)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">get</span>(key)&#123;</span><br><span class="line">        <span class="keyword">let</span> cache_at_key=<span class="keyword">this</span>.cache.get(key)</span><br><span class="line">        <span class="keyword">if</span>(cache_at_key)&#123;</span><br><span class="line">            <span class="comment">//命中，放到最近访问</span></span><br><span class="line">            <span class="keyword">this</span>.moveToTail(cache_at_key)</span><br><span class="line">            <span class="keyword">return</span> cache_at_key.value</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    put(key,value)&#123;</span><br><span class="line">        <span class="keyword">let</span> cache_at_key=<span class="keyword">this</span>.cache.get(key)</span><br><span class="line">        <span class="keyword">if</span>(cache_at_key)&#123;</span><br><span class="line">            cache_at_key.value=value</span><br><span class="line">            <span class="comment">//命中，放到最近访问</span></span><br><span class="line">            <span class="keyword">this</span>.moveToTail(cache_at_key)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;                </span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.cache.size===<span class="keyword">this</span>.capacity)&#123;</span><br><span class="line">                <span class="keyword">let</span> lru_node=<span class="keyword">this</span>.head.next</span><br><span class="line">                link(<span class="keyword">this</span>.head,lru_node.next)</span><br><span class="line">                <span class="comment">//淘汰LRU</span></span><br><span class="line">                <span class="keyword">this</span>.cache.delete(lru_node.key)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//创建节点，并放到最近访问</span></span><br><span class="line">            <span class="keyword">let</span> cache_at_key=<span class="keyword">new</span> Node(key,value)</span><br><span class="line">            <span class="keyword">this</span>.cache.set(key,cache_at_key)</span><br><span class="line">            link(<span class="keyword">this</span>.head.prev,cache_at_key)</span><br><span class="line">            link(cache_at_key,<span class="keyword">this</span>.head)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-            <div class='article_footer'>
-              
-                
+则$f'(p)=(1-np)(1-p)^{n-1}$
+
+易知$f(p)$在$p=\frac{1}{n}$处有极大值$f(\frac{1}{n})=(1-\frac{1}{n})^{n-1}\frac{1}{n}<\frac{1}{n}$
+
+于是得证$f(p)<\frac{1}{n},当0<p<1$ -->
+
+<p>于是得证$E_1&lt;E_2$</p>
+
+      
+    </div>
+    
+      
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
+      <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true,
+    tags: "ams",
+    macros: {
+      href: "{}"
+    }
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|dno",
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+
+    
+
+  
+
+
+	
+</div>
+<aside class='l_side'>
+  
   
     
     
 
-<section class="widget copyright  desktop mobile">
+<section class="widget blogger shadow desktop">
   <div class='content'>
     
-      <blockquote>
+      
+        <div class='avatar'>
+          <img no-lazy src='/images/avatars/walterbright.cc.jpg'/>
+        </div>
+      
+    
+    
+      <div class='text'>
         
-          
-            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+          <h2>水明</h2>
+        
+        
+          <p>咕咕咕</p>
 
+        
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:ssmbuild@outlook.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
           
-            <p>本文永久链接是：<a href=https://walterbright.cc/2020-06/LRU/>https://walterbright.cc/2020-06/LRU/</a></p>
+            <a href="https://github.com/WalterBrightHub"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
           
         
-      </blockquote>
+          
+            <a href="http://www.gitnavi.com/u/walterb/"
+              class="social fas fa-compass flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
     
   </div>
 </section>
 
   
 
-
-              
-            </div>
-          
-        </div>
-        
-          
-
-
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
-      
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-06-29T01:51:02+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年6月29日</p>
-  </a>
-</div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div>
-
-
-        
-      
-        
-          
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
-          
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://walterbright.cc/2020-06/LRU/&title=LRU算法 - 水明&summary=实现一个最近最少使用缓存机制。"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
-          
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://walterbright.cc/2020-06/LRU/&title=LRU算法 - 水明&summary=实现一个最近最少使用缓存机制。"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
-          
-          href="http://service.weibo.com/share/share.php?url=https://walterbright.cc/2020-06/LRU/&title=LRU算法 - 水明&summary=实现一个最近最少使用缓存机制。"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
-
-        
-      
-    </div>
-  </section>
-
-
-        
-        
-          <div class="prev-next">
-            
-              <a class='prev' href='/2020-07/e-lucky/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>两种保底抽奖机制的数学期望比较</p>
-                <p class='content'>现抽奖$n$次，单次中奖概率为$p(0&lt;p&lt;1)$，并且至少中奖一次，有如下两种保底机制：
-方式一：重复取n个随机序列，直到序列中至少中奖一次。
-方式二：序列前n-1项随机抽取，最后...</p>
-              </a>
-            
-            
-              <a class='next' href='/2020-05/miniprogram-pad/'>
-                <p class='title'>小程序适配iPad等宽屏设备的方案<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>在小程序中可以使用rpx单位作为尺寸单位，但在iPad上的体验并不好。
-
-rpx单位的优点：根据750px设计稿构建代码，手机端有一致的体验。对于小屏设备（如iPhone 5或iPad的小分屏）...</p>
-              </a>
-            
-          </div>
-        
-      </section>
-    </article>
-  
-
-
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-  <script>
-    window.subData = {
-      title: 'LRU算法',
-      tools: true
-    }
-  </script>
-
-
-</div>
-<aside class='l_side'>
-  
-  
-
   
     
     
+  
 
-
-  <section class="widget toc-wrapper shadow desktop mobile">
+  <section class="widget category shadow desktop">
     
   <header>
     
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
     
   </header>
 
 
     <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例代码"><span class="toc-text">示例代码</span></a></li></ol>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%AE%97%E6%B3%95/" href="/categories/%E7%AE%97%E6%B3%95/"
+            id="categoriesE7AE97E6B395"
+            ><div class='name'>算法</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" href="/categories/%E7%AE%97%E6%B3%95/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"
+            id="categoriesE7AE97E6B395E58AA8E68081E8A784E58892"
+            ><div class='name'>动态规划</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E7%AE%97%E6%B3%95/%E6%80%9D%E7%BB%B4/" href="/categories/%E7%AE%97%E6%B3%95/%E6%80%9D%E7%BB%B4/"
+            id="categoriesE7AE97E6B395E6809DE7BBB4"
+            ><div class='name'>思维</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/" href="/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/"
+            id="categoriesE7BC96E7A88BE88C83E5BC8F"
+            ><div class='name'>编程范式</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" href="/categories/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"
+            id="categoriesE7BC96E7A88BE88C83E5BC8FE587BDE695B0E5BC8FE7BC96E7A88B"
+            ><div class='name'>函数式编程</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
     </div>
   </section>
 
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/%E4%B9%B1%E6%90%9E/" style="font-size: 14px; color: #999">乱搞</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 14px; color: #999">入门</a> <a href="/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/" style="font-size: 14px; color: #999">函数式编程</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 14px; color: #999">小程序</a> <a href="/tags/%E6%80%9D%E7%BB%B4/" style="font-size: 14px; color: #999">思维</a> <a href="/tags/%E7%8B%82%E9%87%8E%E9%A3%99%E8%BD%A69/" style="font-size: 14px; color: #999">狂野飙车9</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a>
+    </div>
+  </section>
+
+
+  
 
   
 
@@ -666,6 +701,35 @@ rpx单位的优点：根据750px设计稿构建代码，手机端有一致的体
   </footer>
 
 <script>setLoadingBarProgress(80);</script>
+
+
+
+
+	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+	
+
+	
+	    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true,
+    tags: "ams",
+    macros: {
+      href: "{}"
+    }
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|dno",
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+
+	
 
 
       <script>setLoadingBarProgress(60);</script>
